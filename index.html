@@ -29,8 +29,17 @@
 </ol>
 <br>
                 <button type="button" onclick="showAlert(this)">Check my work!</button>
-                <input type="button" onclick='UnSelectAll()' value="Unselect All"/>
+                <input type="button" onclick='UnSelectAll()' value="Uncheck All"/>
+                <input type="button" onclick='selectAll()' value="Check All"/>
 <script>
+function selectAll(){
+				var items=document.getElementsByName('steps');
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox')
+						items[i].checked=true;
+				}
+			}
+
 function UnSelectAll(){
 				var items=document.getElementsByName('steps');
 				for(var i=0; i<items.length; i++){
