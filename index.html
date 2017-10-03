@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
-<header><title>InfoPoint 2.0</title></header>
-<body>
-  <form>
-    <fieldset>
-<legend>Example 1</legend>
-<span><label><input type="checkbox" name="terms"> I accept the <u>Terms and Conditions</u></label></span>
-<span><input type="submit"></span>
-</fieldset>
-  </form>
-</body>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<form>
+  <p>If the member is on both accounts, it is not necessary for the member to verify both account numbers prior to transferring funds.</p>
+<ol style="list-style-position: inside;">
+<li><input type="checkbox" id="Verify the member">Verify the member (<span style="color: #3366ff;">Contact Center</span>&nbsp;/&nbsp;<span style="color: #3366ff;">NFC/Lobby/Telle</span>r).</li>
+<li><input type="checkbox" id="Copy the member's Social Security number">Copy the member's Social Security number (SSN) from Member View.</li>
+<li><input type="checkbox" id="Click Services>Relationships">In DNA, click&nbsp;<strong>Services</strong>&nbsp;&gt;&nbsp;<strong>Relationships</strong>.</li>
+<li><input type="checkbox" id="Click Quick Inquiries">On the<em>&nbsp;Main Menu&nbsp;</em>bar, click&nbsp;<strong>Quick Inquiries&nbsp;</strong>&gt;&nbsp;<strong>Relationship Profile</strong>.</li>
+<li><input type="checkbox" id="Paste the member's SSN into search">In&nbsp;<em>Search Criteria</em>, paste the member's Social Security number.</li>
+<li><input type="checkbox" id="Click query">Click&nbsp;<strong>Query</strong>.</li>
+<li><input type="checkbox" id="Click the withdrawal account number">Click the withdrawal account number. Options will become available on the blue sub menu bar.</li>
+<li><input type="checkbox" id="Click transfer">Click&nbsp;<strong>Transfer</strong>.</li>
+<li><input type="checkbox" id="Select receiving account">From the&nbsp;<em>To Account&nbsp;</em>drop-down, select the receiving account.</li>
+<li><input type="checkbox" id="Enter the amount to be transferred">Enter the amount to be transferred.</li>
+<li><input type="checkbox" id="Select the member requesting the transfer from the Account Roles drop-down">From the&nbsp;<em>To Account Roles</em>&nbsp;drop-down, select the member requesting the transfer.</li>
+<li><input type="checkbox" id="Click update">Click&nbsp;<strong>Update</strong>.</li>
+<li><input type="checkbox" id="Verify the transaction with the member">Verify the transaction with the member, including the following:
+<ul>
+<li>Partial account numbers</li>
+<li>Transaction type</li>
+<li>Amount</li>
+</ul>
+</li>
+<li><input type="checkbox" id="Click process">Click&nbsp;<strong>Process</strong>.</li>
+<li><input type="checkbox" id="Provide a reference number (the first set of digits followed by your cashbox number)">Contact Center: Provide a reference number to the member consisting of the first set of digits followed by your cashbox number.</li>
+<li><input type="checkbox" id="Provide a receipt to the Member">Lobby/NFC/Teller: Provide a receipt to member and complete a&nbsp;<span style="color: #3366ff;">Withdrawal/Transfer&nbsp;</span>form.</li>
+</ol>
+<br>
+                <button type="button" onclick="showAlert(this)">Submit!</button>
+<script>
+    function showAlert(t){
+       var r=[];
+       t=t.parentNode.getElementsByTagName('input');
+       t[0].checked || r.push('Verify the member');
+       r=r.join(' + ');
+       r && alert('You still need to:\n'+r);
+    }
+</script>
+</form>
 </html>

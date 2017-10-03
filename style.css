@@ -1,33 +1,27 @@
-html {
-  font-family: sans-serif;
+ol {
+    margin:0px;
+    padding-left:50px;
+}
+ol li {
+    margin: 0px;
+    padding: 0px;
+    text-indent: -1em;
+    margin-left: 1em;
+}
+ul {
+    margin:0;
+    padding-left:50px;
+}
+ul li {
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0.5em;
+    margin-left: -0.5em;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
-div {
-  margin-bottom: 10px;
-}
-
-fieldset {
-  background: cyan;
-  border: 5px solid blue;
-}
-
-legend {
-  padding: 10px;
-  background: blue;
-  color: cyan;
-}
-
-#otherValue
+li input
 {
-  display: none;
-}
-
-#other:checked ~ #otherValue
-{
-  display: inline-block;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 5px;
 }
