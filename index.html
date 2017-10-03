@@ -32,8 +32,23 @@
 <script>
     function showAlert(t){
        var r=[];
-       t=t.parentNode.getElementsByTagName('input');
-       t[0].checked || r.push('Verify the member');
+       t=t.parentNode.getElementsByTagName("input");
+       t[0].checked || r.push("Verify the member");
+       t[1].checked || r.push("Copy the member's Social Security number");
+       t[2].checked || r.push("Click Services>Relationships");
+       t[3].checked || r.push("Click Quick Inquiries");
+       t[4].checked || r.push("Paste the member's SSN into search");
+       t[5].checked || r.push("Click query");
+       t[6].checked || r.push("Click the withdrawal account number");
+       t[7].checked || r.push("Click transfer");
+       t[8].checked || r.push("Select receiving account");
+       t[9].checked || r.push("Enter the amount to be transferred");
+       t[10].checked || r.push("Select the member requesting the transfer from the Account Roles drop-down");
+       t[11].checked || r.push("Click update");
+       t[12].checked || r.push("Verify the transaction with the member");
+       t[13].checked || r.push("Click process");
+       t[14].checked || r.push("Provide a reference number (the first set of digits followed by your cashbox number)");
+       t[15].checked || r.push("Provide a receipt to the Member");
        r=r.join(' + ');
        r && alert('You still need to:\n'+r);
     }
